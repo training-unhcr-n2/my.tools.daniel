@@ -1,2 +1,5 @@
 
 ^dev$
+^LICENSE\.md$
+^my\.tools\.daniel\.Rproj$
+^\.Rproj\.user$

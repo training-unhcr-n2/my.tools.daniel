@@ -18,26 +18,44 @@ library(testthat)
 pkgload::load_all(export_all = FALSE)
 ```
 
+```{r}
+data_df <- data.frame(a = 1 , b =2)
+names(data_df)
+dim(data_df)
+```
+
 # My function
 
 ```{r function-my_fun}
-#' my_fun Title
+#' get_info_data()
+#' this function take the data frame any data frame #'dimension and names 
 #'
-#' @return 1
+#' @return List of 2 elements Dimension and Name,
+#' @param  data_df it is a data frame
 #' @export
 #'
 #' @examples
-my_fun <- function() {
-  1
+get_info_data <- function(data_df) {
+   stopifnot( is.data.frame(data_df))
+my_list <- list( dimensions = dim(data_df), column_names = names(data_df))
+  return(my_list)
 }
 ```
 
 ```{r examples-my_fun}
-my_fun()
+df_1 <- data.frame(c = 3 , d =4)
+get_info_data(df_1)
 ```
 
 ```{r tests-my_fun}
-test_that("my_fun works", {
+test_that("get_info_data",  {
+ output <- get_info_data(iris)
+# Tet that the function returns something of length 2
+  expect_equal(length(output), 2)
+#Expect_error()
+# that the first element is a numeric of size 2
+# that the first element is a numeric of size 2
+# use dput to test if the output is the expected output
 
 })
 ```
