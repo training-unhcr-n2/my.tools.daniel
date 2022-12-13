@@ -7,6 +7,7 @@ editor_options:
 
 ```{r development, include=FALSE}
 library(testthat)
+library(dplyr)
 ```
 
 <!--
@@ -23,6 +24,13 @@ data_df <- data.frame(a = 1 , b =2)
 names(data_df)
 dim(data_df)
 ```
+
+```{r}
+#Add a dataset avaliable to user
+species <- starwars$species
+species
+```
+
 
 # My function
 

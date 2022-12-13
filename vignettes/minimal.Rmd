@@ -31,6 +31,12 @@ names(data_df)
 dim(data_df)
 ```
 
+```{r}
+#Add a dataset avaliable to user
+species <- starwars$species
+species
+```
+
 # My function
 
 ```{r examples-my_fun}

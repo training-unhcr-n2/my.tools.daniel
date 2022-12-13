@@ -4,7 +4,7 @@ test_that("get_info_data",  {
  output <- get_info_data(iris)
 # Tet that the function returns something of length 2
   expect_equal(length(output), 2)
-#  expect_type(list(output[["dimensions"]],output[["column_names"]]))
+#Expect_error()
 # that the first element is a numeric of size 2
 # that the first element is a numeric of size 2
 # use dput to test if the output is the expected output
