@@ -57,7 +57,6 @@ test_that("get_info_data",  {
 # that the first element is a numeric of size 2
 # use dput to test if the output is the expected output
 
-
 })
 ```
 
